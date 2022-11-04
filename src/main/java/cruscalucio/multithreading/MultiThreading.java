@@ -16,7 +16,7 @@ public class MultiThreading {
         faQualcosa(10_000);
 
         // cambiamogli il name al Thread main
-        current.setName("Ciccio");
+        current.setName("CiccioMain");
         Thread t = new MyThread(100_000_000);
         t.setName("Thread Demone");
         t.setDaemon(true);
@@ -41,7 +41,7 @@ public class MultiThreading {
         faQualcosa(10_000);
 
         // metodi deprecati stoped e destroy
-        // possono lascaino uno stato sporco assolutamente impredicibile
+        // possono lasciare uno stato sporco assolutamente impredicibile
         // alternativa: invocare da un altro thread il suo metodo interrat, che non interrompe l'esecuzione
 //        setta un plag di interruzione
 //                il thread in certi punti verifica se gli è stato settato il..
@@ -50,9 +50,9 @@ public class MultiThreading {
 
 
         Test test = new Test();
-        Thread t = new MyThreadTest(test);
-        t.setName("secondario");
-        t.start();
+        Thread th = new MyThreadTest(test);
+        th.setName("secondario");
+        th.start();
         
         test.eseguiTest("bar");
     }

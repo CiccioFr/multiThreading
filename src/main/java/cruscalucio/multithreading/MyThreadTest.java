@@ -4,7 +4,7 @@ import static cruscalucio.multithreading.MyThread.faQualcosa;
 
 /**
  *
- * @author WS2
+ * @author Francesco
  */
 public class MyThreadTest extends Thread {
 
