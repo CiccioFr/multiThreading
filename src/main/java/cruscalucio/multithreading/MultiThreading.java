@@ -1,5 +1,7 @@
 package cruscalucio.multithreading;
 
+import static cruscalucio.multithreading.MyThread.*;
+
 /**
  *
  * @author Francesco
@@ -15,7 +17,7 @@ public class MultiThreading {
 
         // cambiamogli il name al Thread main
         current.setName("Ciccio");
-        Thread t = new myThread(100_000_000);
+        Thread t = new MyThread(100_000_000);
         t.setName("Thread Demone");
         t.setDaemon(true);
         t.start();
@@ -45,36 +47,13 @@ public class MultiThreading {
 //                il thread in certi punti verifica se gli è stato settato il..
 //                e tira la inteructinterceptio
 //      es qnd viene chiamato sleep ... quando il Thread va in attesa..
-    }
 
-    public static void faQualcosa(int n) {
-        for (int i = 0; i <= n; i++) {
-            if (i % 1_000 == 0) {
-                System.out.println("Thread " + Thread.currentThread().getName()
-                        + " Sono al passo " + i);
-            }
-        }
-    }
 
-    public static class myThread extends Thread {
-
-        private int n;
-
-        public myThread(int n) {
-            super();
-            this.n = n;
-        }
-
-        @Override
-        public void run() {
-            try {
-                faQualcosa(n);
-                Thread.sleep(1000);
-                faQualcosa(n);
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-            }
-        }
+        Test test = new Test();
+        Thread t = new MyThreadTest(test);
+        t.setName("secondario");
+        t.start();
+        
+        test.eseguiTest("bar");
     }
 }
