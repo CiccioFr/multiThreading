@@ -1,7 +1,5 @@
 package cruscalucio.multithreading;
 
-import static cruscalucio.multithreading.MyThread.faQualcosa;
-
 /**
  *
  * @author Francesco

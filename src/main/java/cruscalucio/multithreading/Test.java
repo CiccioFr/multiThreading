@@ -28,7 +28,7 @@ public class Test {
                 System.out.println("Chiave: " + s + " --> " + m.get(s));
             }
         }
-        
+
         // un blocco di codice sincronizzato è sempre collegata ad un oggetto
         Integer v = m.get(k);
 
@@ -37,7 +37,7 @@ public class Test {
         } else {
             System.out.println("Thread: " + Thread.currentThread().getName() + "Chiave" + k + "NON Trovato");
         }
-        
+
         for (int i = 0; i < 10; i++) {
             System.out.println("Thread: " + Thread.currentThread().getName() + "Chiave" + k + "TROVATO");
         }
