@@ -15,8 +15,9 @@ public class MyThread extends Thread{
 
     public static void faQualcosa(int n) {
         for (int i = 0; i <= n; i++) {
+            // stampa ogni 1000
             if (i % 1_000 == 0) {
-                System.out.println("OK Thread " + Thread.currentThread().getName()
+                System.out.println("Thread " + Thread.currentThread().getName()
                         + " Sono al passo " + i);
             }
         }

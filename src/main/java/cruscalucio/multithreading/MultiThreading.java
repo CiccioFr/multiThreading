@@ -17,6 +17,7 @@ public class MultiThreading {
 
         // cambiamogli il name al Thread main
         current.setName("CiccioMain");
+        
         Thread t = new MyThread(100_000_000);
         t.setName("Thread Demone");
         t.setDaemon(true);
